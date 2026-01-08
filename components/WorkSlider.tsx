@@ -22,13 +22,13 @@ export type Work = {
 export const featuredWorks: Work[] = [
   {
     no: '1',
-    title: 'Portfolio Website',
-    description: 'Next.jsで構築したポートフォリオサイト。',
+    title: '婚活未来診断',
+    description: 'Nuxt.jsで構築したポートフォリオサイト。',
     role: ['Frontend', 'UI Design'],
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel'],
     focus: ['Performance', 'Component Design'],
     liveUrl: 'https://example.com',
-    thumbnail: '/images/img_works01.png',
+    thumbnail: '/images/img_works02.png',
   },
   {
     no: '2',
@@ -38,17 +38,7 @@ export const featuredWorks: Work[] = [
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel'],
     focus: ['Performance', 'Component Design'],
     liveUrl: 'https://example.com',
-    thumbnail: '/images/img_works01.png',
-  },
-  {
-    no: '2',
-    title: 'Portfolio Website',
-    description: 'Next.jsで構築したポートフォリオサイト。',
-    role: ['Frontend', 'UI Design'],
-    tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel'],
-    focus: ['Performance', 'Component Design'],
-    liveUrl: 'https://example.com',
-    thumbnail: '/images/img_works01.png',
+    thumbnail: '/images/img_works02.png',
   },
   {
     no: '3',
@@ -58,7 +48,17 @@ export const featuredWorks: Work[] = [
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel'],
     focus: ['Performance', 'Component Design'],
     liveUrl: 'https://example.com',
-    thumbnail: '/images/img_works01.png',
+    thumbnail: '/images/img_works02.png',
+  },
+  {
+    no: '4',
+    title: 'Portfolio Website',
+    description: 'Next.jsで構築したポートフォリオサイト。',
+    role: ['Frontend', 'UI Design'],
+    tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel'],
+    focus: ['Performance', 'Component Design'],
+    liveUrl: 'https://example.com',
+    thumbnail: '/images/img_works02.png',
   },
 ]
 
@@ -70,7 +70,7 @@ export default function WorkSlider() {
       pagination={{ clickable: true }}
       spaceBetween={24}
       slidesPerView={1.2}
-      //centeredSlides={true}
+      centeredSlides={true}
       breakpoints={{
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },

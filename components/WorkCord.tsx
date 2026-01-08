@@ -28,10 +28,10 @@ export function WorkCard({ work }: Props) {
         />
       )}</p>
 
-      <h3>{work.title}</h3>
-      <p>{work.description}</p>
+      <h3 className='work-card__title'>{work.title}</h3>
+      <p className='work-card__description'>{work.description}</p>
 
-      <ul>
+      <ul className='list'>
         <li><strong>Role:</strong> {work.role.join(', ')}</li>
         <li><strong>Tech:</strong> {work.tech.join(', ')}</li>
         {work.focus && (

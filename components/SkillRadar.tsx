@@ -83,6 +83,7 @@ export default function SkillRadar() {
           fill="#FFE0E6"
           stroke="#FFA4B5"
           strokeWidth="2"
+          suppressHydrationWarning
           style={{
             transition: "all 0.8s ease-out",
           }}
@@ -119,9 +120,9 @@ export default function SkillRadar() {
 
       {/* ホバー説明 */}
       {hovered && (
-        <div className="absolute bottom-[-60px] rounded bg-gray-900 text-white px-3 py-1 text-sm">
-          <p>{hovered.title}</p>
-          <p>
+        <div className="description-card">
+          <p className="description-card__title">{hovered.title}</p>
+          <p className="description-card__txt">
           {hovered.description}</p>
         </div>
       )}
