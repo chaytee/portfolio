@@ -1,8 +1,10 @@
-export function WorkPastProjects() {
+import Image from "next/image";
+
+export default function WorkPastProjects() {
   return (
     <article className="past-projects">
-     <dl>
-      <dt><img src="/images/text_past_title.png" alt="2018-2022" /></dt>
+     <dl className="past-box">
+      <dt><Image src="/images/text_past_title.png" alt="2018-2022" width={212} height={33} /></dt>
       <dd>
         <p>自身のコーポレートサイトや自信が手がけた作品。</p>
         <ul>
@@ -18,7 +20,7 @@ export function WorkPastProjects() {
         </ul>
       </dd>
      </dl>
-     <div className="btn-wrap"><a href="">作品を見る</a></div>
+     <div className="btn-wrap"><button className="btn-link">作品を見る</button></div>
     </article>
   )
 }

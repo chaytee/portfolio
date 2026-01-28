@@ -1,0 +1,39 @@
+.firstView {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  &__bg {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cercle1 {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 2;
+  }
+
+  .cercle2 {
+    position: absolute;
+    bottom: 2%;
+    left: 30%;
+    z-index: 2;
+  }
+
+  .cercle3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .cercle4 {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    z-index: 2;
+  }
+}

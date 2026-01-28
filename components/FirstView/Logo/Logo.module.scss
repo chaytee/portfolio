@@ -1,0 +1,58 @@
+.mainLogo {
+  max-width: 327px;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  z-index: 99;
+  background-color: #111111;
+  padding-inline: 16px;
+
+  svg {
+    max-width: 100%;
+    position: relative;
+    z-index: 99;
+  }
+
+  // 初期状態（非表示）
+  svg {
+    :global(.svg-elem-1),
+    :global(.svg-elem-2),
+    :global(.svg-elem-3),
+    :global(.svg-elem-4),
+    :global(.svg-elem-5),
+    :global(.svg-elem-6),
+    :global(.svg-elem-7),
+    :global(.svg-elem-8),
+    :global(.svg-elem-9) {
+      fill: transparent;
+      transition-property: fill;
+      transition-duration: 1.2s;
+      transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+
+    :global(.svg-elem-1) { transition-delay: 0.8s; }
+    :global(.svg-elem-2) { transition-delay: 1s; }
+    :global(.svg-elem-3) { transition-delay: 1.2s; }
+    :global(.svg-elem-4) { transition-delay: 1.4s; }
+    :global(.svg-elem-5) { transition-delay: 1.6s; }
+    :global(.svg-elem-6) { transition-delay: 1.8s; }
+    :global(.svg-elem-7) { transition-delay: 2s; }
+    :global(.svg-elem-8) { transition-delay: 2.2s; }
+    :global(.svg-elem-9) { transition-delay: 2.4s; }
+  }
+
+  // active 時（表示）
+  svg.active {
+    :global(.svg-elem-1),
+    :global(.svg-elem-2),
+    :global(.svg-elem-3),
+    :global(.svg-elem-4),
+    :global(.svg-elem-5),
+    :global(.svg-elem-6),
+    :global(.svg-elem-7),
+    :global(.svg-elem-8),
+    :global(.svg-elem-9) {
+      fill: #ffffff;
+    }
+  }
+}

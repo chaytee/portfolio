@@ -1,17 +1,17 @@
 import Image from "next/image";
 import SkillRadar from "@/components/SkillRadar";
 
-export function SkillSection() {
+export default function SkillSection() {
   return (
-    <article className="skill-section">
+    <article className="skill-section w-full pt-18">
       <h2 className="skill-section__title text-center"><Image src="/images/title_skills.svg" alt="Skills" width={213} height={66} /></h2>
       <SkillRadar />
-      <div className="skill-section__list-container">
-        <h3 className="skill-section__list-item-title">UIUXデザイン</h3>
-        <dl className="skill-section__list-item">
+      <div className="list-container">
+        <h3 className="list-container__title"><Image src="/images/icon_star.svg" width={24} height={24} alt="" />UIUXデザイン</h3>
+        <dl className="list-container__item">
           <dt>デザイン・UI/UX　3年以上</dt>
           <dd>
-            <ul>
+            <ul className="list">
               <li>ユーザーリサーチ</li>
               <li>ワイヤーフレーム</li>
               <li>プロトタイピング</li>
@@ -21,10 +21,10 @@ export function SkillSection() {
             </ul>
           </dd>
         </dl>
-        <dl className="skill-section__list-item">
+        <dl className="list-container__item">
           <dt>Webデザイン　5年以上</dt>
           <dd>
-            <ul>
+            <ul className="list">
               <li>LP作成</li>
               <li>バナー作成</li>
               <li>ロゴデザイン</li>
@@ -33,10 +33,21 @@ export function SkillSection() {
             </ul>
           </dd>
         </dl>
+        <dl className="list-container__item">
+          <dt>デザインツール</dt>
+          <dd>
+            <ul className="item-list">
+              <li><Image src="/images/icon_figma.png" alt="" width={40} height={40} /><span className="title">figma</span></li>
+              <li><Image src="/images/icon_photoshop.png" alt="" width={40} height={40} /><span className="title">photoshop</span></li>
+              <li><Image src="/images/icon_illust.png" alt="" width={40} height={40} /><span className="title">illustrator</span></li>
+              <li><Image src="/images/icon_xd.png" alt="" width={40} height={40} /><span className="title">xd</span></li>
+            </ul>
+          </dd>
+        </dl>
       </div>
-      <div className="skill-section__list-container">
-        <h3 className="skill-section__list-item-title">フロントエンド開発</h3>
-        <dl className="skill-section__list-item">
+      <div className="list-container">
+        <h3 className="list-container__title"><Image src="/images/icon_star.svg" width={24} height={24} alt="" />フロントエンド開発</h3>
+        <dl className="list-container__item">
           <dt>HTML/CSS</dt>
           <dd>
             <ul>
@@ -47,19 +58,7 @@ export function SkillSection() {
             </ul>
           </dd>
         </dl>
-        <dl className="skill-section__list-item">
-          <dt>WordPress　5年以上</dt>
-          <dd>
-            <ul>
-              <li>WordPressカスタマイズ</li>
-              <li>WordPressテーマカスタマイズ</li>
-              <li>WordPressプラグイン開発</li>
-              <li>WordPressテーマ開発</li>
-              <li>WordPressテーマデザイン</li>
-            </ul>
-          </dd>
-        </dl>
-        <dl className="skill-section__list-item">
+        <dl className="list-container__item">
           <dt>JavaScriptフレームワーク/ライブラリ</dt>
           <dd>
             <ul>
@@ -73,13 +72,24 @@ export function SkillSection() {
             </ul>
           </dd>
         </dl>
-      </div>
-        <div className="skill-section__list-container">
-        <h3 className="skill-section__list-item-title">バックエンド開発・その他</h3>
-        <dl className="skill-section__list-item">
-          <dt>バックエンド開発</dt>
+        <dl className="list-container__item">
+          <dt>WordPress　5年以上</dt>
           <dd>
             <ul>
+              <li>テーマカスタマイズ</li>
+              <li>テーマカスタマイズ</li>
+              <li>プラグイン開発</li>
+              <li>テーマデザイン</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <div className="list-container">
+        <h3 className="list-container__title"><Image src="/images/icon_star.svg" width={24} height={24} alt="" />バックエンド開発・その他</h3>
+        <dl className="list-container__item">
+          <dt>バックエンド開発</dt>
+          <dd>
+            <ul className="list">
               <li>Node.js 　3年以上</li>
               <li>Express 　3年以上</li>
               <li>Ruby on Rails 　1年以上</li>
@@ -88,21 +98,21 @@ export function SkillSection() {
             </ul>
           </dd>
         </dl>
-        <dl className="skill-section__list-item">
+        <dl className="list-container__item">
           <dt>データベース</dt>
           <dd>
-            <ul>
-              <li>MySQL 　3年以上</li>
+          <ul className="list">
+              <li>MySQL　3年以上</li>
               <li>Firebase 　3年以上</li>
               <li>Supabase 　1年未満</li>
             </ul>
           </dd>
         </dl>
-        <dl className="skill-section__list-item">
+        <dl className="list-container__item">
           <dt>その他</dt>
           <dd>
-            <ul>
-              <li>Git 　5年以上</li>
+          <ul className="list">
+              <li>Git　5年以上</li>
               <li>GitHub 　5年以上</li>
               <li>microCMS　API連携</li>
               <li>Zendesk　API連携</li>

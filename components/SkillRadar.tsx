@@ -60,7 +60,7 @@ export default function SkillRadar() {
     .join(" ");
 
   return (
-    <div ref={ref} className="relative flex justify-center">
+    <div ref={ref} className="section-skill relative flex justify-center">
       <svg width={SIZE} height={SIZE}>
         {/* 軸 */}
         {skills.map((_, i) => {

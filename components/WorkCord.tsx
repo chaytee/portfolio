@@ -16,7 +16,7 @@ type Props = {
   work: Work
 }
 
-export function WorkCard({ work }: Props) {
+export default function WorkCard({ work }: Props) {
   return (
     <article className="work-card">
       <p className="thumbnail">{work.thumbnail && (
