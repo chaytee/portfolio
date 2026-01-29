@@ -1,6 +1,7 @@
 import FirstView from "@/components/FirstView/FirstView";
 import SkillSection from "@/components/SkillSection/SkillSection";
 import VisionSection from "@/components/VisionSection/VisionSection";
+import ProfileSection from "@/components/ProfileSection/profileSection";
 import WorksSection  from "@/components/WorkSection/WorksSection";
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
         </div>
         <SkillSection />
         <VisionSection />
+        <ProfileSection />
         <WorksSection />
       </main>{" "}
       <p className="copy text-center mt-18">@2026 chisato shimahara</p>
