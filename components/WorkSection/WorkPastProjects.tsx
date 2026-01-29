@@ -5,7 +5,7 @@ export default function WorkPastProjects() {
   return (
     <article className={styles.pastProjects}>
      <dl className={styles["past-box"]}>
-      <dt><Image src="/images/text_past_title.png" alt="2018-2022" width={212} height={33} /></dt>
+      <dt className="mb-8"><Image src="/images/text_past_title.png" alt="2018-2022" width={212} height={33} /></dt>
       <dd>
         <p className="text-[clamp(1.4rem,4vw,1.4rem)]">自身のコーポレートサイトや自信が手がけた作品。</p>
         <ul>

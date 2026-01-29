@@ -6,10 +6,10 @@ const {skillSection, listContainer} = styles;
 
 export default function SkillSection() {
   return (
-    <article className={`${skillSection} w-full pt-40`}>
-      <h2 className="skill-section__title"><Image src="/images/title_skills.svg" alt="Skills" width={213} height={66} className="mx-auto" /></h2>
+    <article className={`${skillSection} w-full pt-32`}>
+      <h2 className={styles.skillSection__title}><Image src="/images/title_skills.svg" alt="Skills" width={213} height={66} className="mx-auto" /></h2>
       <SkillRadar />
-      <div className={listContainer}>
+      <div className={`${listContainer} mt-20`}>
         <h3 className={styles.listContainer__title}><Image src="/images/icon_star.svg" width={24} height={24} alt="" />UIUXデザイン</h3>
         <dl className={styles.listContainer__item}>
           <dt>デザイン・UI/UX　3年以上</dt>

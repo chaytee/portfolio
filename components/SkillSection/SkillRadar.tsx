@@ -15,10 +15,10 @@ const skills: Skill[] = [
   { label: "UI/UX", value: 80, title:'UI UXデザイン', description: "ユーザー導線を意識した画面設計ができます" },
   { label: "Negotiation", value: 85, title: '顧客折衝', description: "背景を踏まえ要望に対して適切な提案ができます" },
   { label: "Architecture", value: 75, title: '設計・構造化', description: "ディレクトリ設計・責務分離を考えられます" },
-  { label: "Performance", value: 90, title: 'パフォーマンス・品質', description: "UX を損なわない範囲で、パフォーマンスを最適化する実装ができます" },
+  { label: "Quality", value: 90, title: '品質', description: "UX を損なわない範囲で、パフォーマンスを最適化する実装ができます" },
 ];
 
-const SIZE = 300;
+const SIZE = 240;
 const CENTER = SIZE / 2;
 const RADIUS = 90;
 
@@ -35,7 +35,8 @@ export default function SkillRadar() {
 
   const ref = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
-  const [hovered, setHovered] = useState<Skill | null>(null);
+  // 初期表示で説明を出して「押せる/ホバーできる」ことを明確にする
+  const [activeSkill, setActiveSkill] = useState<Skill>(() => skills[0]);
 
   useEffect(() => {
     // domが描画されるまで
@@ -66,7 +67,7 @@ export default function SkillRadar() {
   .join(" ");
 
   return (
-    <div ref={ref} className="relative flex justify-center">
+    <div ref={ref} className="relative flex justify-center pb-40">
       <svg width={SIZE} height={SIZE}>
         {/* 軸 */}
         {skills.map((_, i) => {
@@ -98,23 +99,27 @@ export default function SkillRadar() {
         {skills.map((skill, i) => {
           const p = getPoint(i, skill.value, progress);
           const labelPos = getPoint(i, 115, 1);
+          const isActive = activeSkill.label === skill.label;
 
           return (
             <g key={skill.label}>
               <circle
                 cx={p.x}
                 cy={p.y}
-                r={5}
+                r={isActive ? 8 : 6}
                 fill="#FFA4B5"
-                onMouseEnter={() => setHovered(skill)}
-                onMouseLeave={() => setHovered(null)}
-                className={`cursor-pointer ${styles.hoverDot}`}
+                stroke={isActive ? "#ffffff" : "transparent"}
+                strokeWidth={isActive ? 2 : 0}
+                onMouseEnter={() => setActiveSkill(skill)}
+                onFocus={() => setActiveSkill(skill)}
+                tabIndex={0}
+                className={`cursor-pointer ${styles.hoverDot} ${isActive ? styles.activeDot : ""}`}
               />
               <text
                 x={labelPos.x}
                 y={labelPos.y}
                 textAnchor="middle"
-                className="fill-gray-700 text-[clamp(1.2rem,4vw,1.6rem)]"
+                className="fill-gray-700 text-[clamp(1.2rem,4vw,1.4rem)]"
               >
                 {skill.label}
               </text>
@@ -124,11 +129,11 @@ export default function SkillRadar() {
       </svg>
 
       {/* ホバー説明 */}
-      {hovered && (
+      {activeSkill && (
         <div className={styles.descriptionCard}>
-          <p className={styles.descriptionCard__title}>{hovered.title}</p>
+          <p className={styles.descriptionCard__title}>{activeSkill.title}</p>
           <p className={styles.descriptionCard__txt}>
-          {hovered.description}</p>
+          {activeSkill.description}</p>
         </div>
       )}
     </div>

@@ -16,7 +16,7 @@ export default function Home() {
             <br />
             ご覧いただきありがとうございます。
           </p>
-          <p className="text-[clamp(1.4rem,4vw,1.6rem)] mb-10 md:mb-6 text-center">
+          <p className="text-[clamp(1.4rem,4vw,1.6rem)] mb-12 text-center">
           フロントエンドエンジニアとして、UX設計の意図を理解し、<br className="hidden md:block" />仮説検証から画面実装までを担う「UXエンジニア」的な役割を担ってきました。
           </p>
           <div className="rollMsg">

@@ -1,8 +1,20 @@
 .skillSection {
 
+  &__title {
+    margin-bottom: 4rem;
+  }
+
   .hoverDot {
     -webkit-animation: blink 1s infinite;
     animation: blink 2s infinite;
+  }
+
+  .activeDot {
+    animation: none;
+    -webkit-animation: none;
+    opacity: 1;
+    -webkit-filter: drop-shadow(0 0 6px rgba(255, 164, 181, 0.9));
+            filter: drop-shadow(0 0 6px rgba(255, 164, 181, 0.9));
   }
 
   @-webkit-keyframes blink {
@@ -36,7 +48,7 @@
   .descriptionCard {
     position: absolute;
     z-index: 10;
-    bottom: -30px;
+    bottom: 0;
     background-color: #3e3f48;
     color: #fff;
     border-radius: 8px;
@@ -115,7 +127,7 @@
     }
 
     & + .listContainer {
-      margin-top: 40px;
+      margin-top: 4rem;
     }
   }
 }

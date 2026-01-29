@@ -46,6 +46,14 @@ a, button {
   cursor: auto;
 }
 
+a:hover, button:hover {
+  opacity: 0.9;
+}
+
+:focus {
+  outline: #eade56;
+}
+
 /* 背景設定 */
 .bg_wide {
   position: relative;
@@ -69,6 +77,7 @@ a, button {
   border-radius: 16px;
   padding: 24px 32px;
   background-color: rgba(255,255,255, 0.8);
+  box-shadow: 0 0 4px rgba(0,0,0, 0.2);
 }
 
 .copy {
