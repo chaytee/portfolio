@@ -93,21 +93,22 @@ export default function SkillSection() {
           <dt>バックエンド開発</dt>
           <dd>
             <ul className={styles.list}>
-              <li>Node.js 　3年以上</li>
               <li>Express 　3年以上</li>
               <li>Ruby on Rails 　1年以上</li>
-              <li>PHP 　1年以上</li>
-              <li>Laravel 　1年以上</li>
+              <li>PHP 　1年未満</li>
+              <li>Laravel 　1年未満</li>
             </ul>
           </dd>
         </dl>
         <dl className={styles.listContainer__item}>
-          <dt>データベース</dt>
+          <dt>データベース/インフラ</dt>
           <dd>
           <ul className={styles.list}>
               <li>MySQL　3年以上</li>
               <li>Firebase 　3年以上</li>
               <li>Supabase 　1年未満</li>
+              <li>Gogle Cloud(Gcp) 　3年以上</li>
+              <li>AWS 1年未満　※自己学習</li>
             </ul>
           </dd>
         </dl>
@@ -115,16 +116,15 @@ export default function SkillSection() {
           <dt>その他</dt>
           <dd>
           <ul className={styles.list}>
-              <li>Git　5年以上</li>
               <li>GitHub 　5年以上</li>
               <li>microCMS　API連携</li>
               <li>Zendesk　API連携</li>
               <li>Slack　API連携</li>
               <li>HTMLメール(デザイン/コーディング)</li>
               <li>SNS連携(Facebook/Twitter/Instagram/YouTube)</li>
-              <li>コミュニケーションツール（Slack / Notion </li>
+              <li>コミュニケーションツール（Slack / Notion）</li>
               <li>ptengineでのABテスト</li>
-              <li>LステップでのABテスト実施</li>
+              <li>Lステップでのマーケ戦略・ABテスト実施</li>
               <li>Go スクレイピング</li>
             </ul>
           </dd>
