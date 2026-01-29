@@ -30,13 +30,13 @@ color,
 label: string;
 color: string;
 }) {
-const [orbits, setOrbits] = useState<Orbit[] | null>(null);
-
-
 // ✅ Client マウント後にだけ random 生成
-useEffect(() => {
-setOrbits(createOrbits());
-}, []);
+const [orbits, setOrbits] = useState<Orbit[] | null>(() => {
+  // Server-side: return null
+  if (typeof window === 'undefined') return null;
+  // Client-side: initialize with random values
+  return createOrbits();
+});
 
 
 // ✅ SSR / hydration 中は描画しない
