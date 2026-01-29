@@ -12,7 +12,7 @@ export default function WorksSection() {
           <span className="btn-section__link-text">UIUX設計<br />
           フロントエンド</span>
         </a>
-        <a href="/works" className={`${styles["btn-section__link"]} ${styles.slide}`}>
+        <a href="https://drive.google.com/file/d/1HMk4UmAHMUOtSnyfrPgyj29W5AMFYVQU/view?usp=drive_link" target="_blank" className={`${styles["btn-section__link"]} ${styles.slide}`}>
           <span className="btn-section__link-text">slide design</span>
         </a>
       </div>
