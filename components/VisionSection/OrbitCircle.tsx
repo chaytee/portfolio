@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 type Orbit = {
@@ -31,10 +31,10 @@ label: string;
 color: string;
 }) {
 // ✅ Client マウント後にだけ random 生成
-const [orbits, setOrbits] = useState<Orbit[] | null>(() => {
+const [orbits] = useState<Orbit[] | null>(() => {
   // Server-side: return null
   if (typeof window === 'undefined') return null;
-  // Client-side: initialize with random values
+  // Client-side: クライアント側でのみcreateOrbits()を実行
   return createOrbits();
 });
 
