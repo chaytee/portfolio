@@ -1,0 +1,121 @@
+.skillSection {
+
+  .hoverDot {
+    -webkit-animation: blink 1s infinite;
+    animation: blink 2s infinite;
+  }
+
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .descriptionCard {
+    position: absolute;
+    z-index: 10;
+    bottom: -30px;
+    background-color: #3e3f48;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 16px;
+
+    &__title {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    &__txt {
+      font-size: 1.4rem;
+    }
+  }
+
+  .listContainer {
+    background-color: #fff;
+    border: 1px solid #888888;
+    border-radius: 16px;
+    padding: 24px;
+
+    ul {
+      li {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+
+      img {
+        margin-right: 8px;
+      }
+    }
+
+    &__item {
+
+      .description {
+        display: block;
+        text-indent: 1em;
+      }
+      dt {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+
+      .list {
+        margin-left: 32px;
+        list-style-type: disc;
+        li {
+          line-height: 1.6;
+        }
+      }
+      .itemList {
+        display: flex;
+        gap: 8px;
+
+        li {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+
+          .title {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      & + .listContainer__item {
+        margin-top: 24px;
+      }
+    }
+
+    & + .listContainer {
+      margin-top: 40px;
+    }
+  }
+}

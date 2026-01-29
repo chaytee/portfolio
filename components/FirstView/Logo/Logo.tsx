@@ -14,7 +14,7 @@ export default function Logo() {
   }, []);
 
   return (
-    <div className={mainLogo}>
+    <div className={`${mainLogo} w-4/5 md:w-9/10 lg:w-9/10`}>
       <svg
         className={active ? styles.active : ""}
         width="461"

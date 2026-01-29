@@ -1,0 +1,243 @@
+/*==================================================
+  基本スタイル
+==================================================*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: #FFF;
+	color: #333333;
+	font-family: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	text-align: center;
+	-webkit-text-size-adjust: none;
+}
+p {
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+.container p {
+	margin-bottom: 1em;
+}
+p.nm {
+	margin-bottom: 0px;
+}
+h1, h2, h3, h4 {
+	font-size: 100%;
+	margin: 0;
+}
+hr {
+	margin-bottom: 1em;
+	border: 0px;
+	border-bottom: 1px dashed #BBBBBB;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+}
+th {
+	font-weight: normal;
+	text-align: left;
+}
+img {
+	vertical-align: bottom;
+	max-width: 100%;
+	height: auto;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/*--------------------------------------------------
+  リンク
+--------------------------------------------------*/
+a {
+	text-decoration: none;
+}
+a img {
+	border: none;
+}
+a:active, a:hover {
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+/*--------------------------------------------------
+  フォントサイズ
+--------------------------------------------------*/
+html {
+	font-size: 62.5%;/* ルートのフォントサイズを10px設定 */
+}
+body {
+	font-size: 1.6em;/* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 指定なしの場合は16px*/
+	line-height: 2;
+}
+h1 {
+	font-size: 36px;/* IE8以下とAndroid4.3以下用フォールバック */
+	font-size: calc(2.4rem+ ((1vw - 0.64rem) * 2.1429));/* 24px~36pxで可変*/
+	line-height: 1.3;
+}
+h2 {
+	font-size: 24px;/* IE8以下とAndroid4.3以下用フォールバック */
+	font-size: calc(2rem+ ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+	line-height: 1.3;
+}
+@media (min-width: 1200px) {/* 1200px以上*/
+	h1 {
+		font-size: 3.6rem;/* 36px*/
+	}
+	h2 {
+		font-size: 2.4rem;/* 24px*/
+	}
+}
+@media screen and (max-width: 640px) {/* 640px以下*/
+	body {
+		line-height: 2;
+	}
+	h1 {
+		font-size: 2.4rem;/* 24px*/
+	}
+	h2 {
+		font-size: 2rem;/* 20px*/
+	}
+}
+/**/
+.b {
+	font-weight: bold;
+}		/* 太字 */
+.fs {
+	font-size: 85%;
+}				/* 小さい文字 */
+.fm {
+	font-size: 110%;
+}			/* 大きい文字 */
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+/*--------------------------------------------------
+  配置
+--------------------------------------------------*/
+.cen {
+	text-align: center;
+}	/* 中央寄せ */
+@media print, screen and (min-width:769px) {
+	.cen_pc {
+		text-align: center;
+	}	/* 中央寄せ */
+}
+.lft {
+	text-align: left;
+}		/* 左寄せ */
+.rit {
+	text-align: right;
+}		/* 右寄せ */
+.vtop {
+	vertical-align: top;
+}		/* 上詰め */
+.vbtm {
+	vertical-align: bottom;
+}	/* 下詰め */
+.ind {
+	text-indent: -0.5em;
+}
+.f-s {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+}
+.f-c {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.f-se {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-evenly;
+	        justify-content: space-evenly;
+}
+
+.f-sb {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+/*--------------------------------------------------
+  画像配置（文字を回り込ます）
+--------------------------------------------------*/
+.img_lft {
+	float: left;
+	margin-right: 20px;
+}
+.img_rit {
+	float: right;
+	margin-left: 20px;
+}
+/*--------------------------------------------------
+  その他
+--------------------------------------------------*/
+/* フロート解除 */
+.cb {
+	clear: both;
+}
+/* タブレットスマホのみ表示 */
+.dsp_tbs {
+	display: none;
+}
+/* 背景ワイド */
+.wide {
+	position: relative;
+}
+.wide::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100vw;
+	height: 100%;
+	margin-left: calc(((100vw - 100%) / 2) * -1);
+	margin-right: calc(((100vw - 100%) / 2) * -1);
+	content: "";
+	z-index: -1;
+}
+@media only screen and (max-width: 1150px) and (min-width: 769px){
+	.wide::before {
+		width: calc(100% + 50px);
+		margin-left: -25px;
+		margin-right: 0;
+	}
+}
+/*--------------------------------------------------
+  コンテナ
+--------------------------------------------------*/
+#container {
+	overflow: hidden;
+	text-align: left;
+	line-height: 1.6;
+}
+#container p {
+	margin-bottom: 1em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+/*PC*/
+@media print, screen and (min-width:769px) {
+	html, body, #wrap {
+		height: 100%;
+	}
+	body > #wrap {
+		height: auto;
+		min-height: 100%;
+	}
+}

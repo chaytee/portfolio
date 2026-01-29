@@ -1,0 +1,210 @@
+/*グローバルナビの設定*/
+#g_menu .global-nav ul {
+	background-color: #111111;
+}
+#g_menu .global-nav ul li {
+	list-style-type: none
+}
+#g_menu .global-nav ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	font-size: 16px;
+}
+#g_menu .global-nav ul li a span {
+	display: block;
+	font-size: 12px;
+}
+/*---------------------------
+    769px 以上 PC
+----------------------------*/
+@media print, screen and (min-width: 769px) {
+	#g_menu .hamburger {
+		display: none
+	}
+	#g_menu .global-nav ul {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-evenly;
+		        justify-content: space-evenly;
+		-webkit-align-items: center;
+		        align-items: center;
+		padding: 15px 0;
+	}
+	#g_menu .global-nav ul li a {
+		font-size: 2rem;
+		overflow: hidden;
+		position: relative;
+		z-index: 999;
+		padding-left: 17px;
+	}
+	/*さらにメニュー詳細付ける場合*/
+	#g_menu .global-nav ul li .inner {
+		display: block;
+		height: 0;
+		position: relative;
+		top: 10px;
+	}
+	#g_menu .global-nav ul li .inner li {
+		width: 100%
+	}
+	#g_menu .global-nav ul li .inner a {
+		display: block;
+		height: 0;
+		font-size: 1.4rem;
+		transition: all .5s ease-out;
+		-webkit-transition: all .5s ease-out;
+		-moz-transition: all .5s ease-out;
+		-ms-transition: all .5s ease-out;
+		-o-transition: all .5s ease-out;
+		background-color: rgba(255, 255, 255, 0.5);
+		text-align: left;
+	}
+
+	#g_menu .global-nav ul li.on a,
+	#g_menu .global-nav ul li a:hover {
+		background: url(../img/hover.png) no-repeat bottom 5px left;
+		background-size: 15px auto;
+		color: #FC913A;
+		filter: alpha(opacity=100);
+		-moz-opacity: 1;
+		opacity: 1
+	}
+	#g_menu .global-nav ul > li:hover li a {
+		color: #FC913A;
+		display: table;
+		margin-top: 1px;
+		width: 100%;
+		height: 2em;
+		transition: none;
+	}
+	#g_menu .global-nav ul > li:hover li a:hover {
+		background: url(../img/hover.png) no-repeat bottom 5px left;
+		background-size: 15px auto;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	/*#global-nav .accordion > li:hover li:first-of-type a {
+		margin-top: 13px
+	}*/
+}
+/*---------------------------
+    768px 以下 タブレット
+----------------------------*/
+@media screen and (max-width: 768px) {
+	#g_menu .global-nav ul li a {
+		font-size: 18px;
+		padding: 15px 0;
+	}
+	/*ハンバーガーメニュー*/
+	#g_menu .hamburger {
+		position: fixed;
+		top: 18px;
+		right: 15px;
+		width: 50px;
+		height: 40px;
+		display: inline-block;
+		transition: all .4s;
+		box-sizing: border-box;
+		z-index: 9998;
+		cursor: pointer;
+	}
+	#g_menu .hamburger span {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background-color: #000000;
+		border-radius: 4px;
+		display: inline-block;
+		transition: all .4s;
+		box-sizing: border-box;
+		display: inline-block;
+		transition: all .4s;
+		box-sizing: border-box;
+		position: absolute;
+		border-radius: 4px;
+	}
+	#g_menu .hamburger span:nth-of-type(1) {
+		top: 0;
+	}
+	#g_menu .hamburger span:nth-of-type(2) {
+		top: 17px;
+	}
+	#g_menu .hamburger span:nth-of-type(3) {
+		bottom: 3px;
+	}
+	#g_menu .hamburger.active span:nth-of-type(3) {
+		transform: translateY(-11px) rotate(45deg);
+		-webkit-transform: translateY(-11px) rotate(45deg);
+		-moz-transform: translateY(-11px) rotate(45deg);
+		-ms-transform: translateY(-11px) rotate(45deg);
+		-o-transform: translateY(-11px) rotate(45deg)
+	}
+	/*スライドで表示*/
+	.global-nav {
+		position: fixed;
+		left: -320px; /* これで隠れる */
+		top: 0;
+		width: 300px; /* スマホに収まるくらい */
+		height: 100vh;
+		padding-top: 40px;
+		background-color: #111111;
+		transition: all .6s;
+		z-index: 200;
+		overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+	}
+	/* 表示された時用のCSS */
+	.nav-open .global-nav {
+		left: 0;
+	  }
+	.nav-open .black-bg {
+		opacity: .8;
+		visibility: visible;
+	}
+	.nav-open .hamburger span:nth-of-type(1) {
+		transform: translateY(13px) rotate(-45deg);
+		-webkit-transform: translateY(13px) rotate(-45deg);
+		-moz-transform: translateY(13px) rotate(-45deg);
+		-ms-transform: translateY(13px) rotate(-45deg);
+		-o-transform: translateY(13px) rotate(-45deg)
+	}
+	.nav-open .hamburger span:nth-of-type(2) {
+		left: 50%;
+		opacity: 0;
+		-webkit-animation: active-menu-bar02 .8s forwards;
+		animation: active-menu-bar02 .8s forwards
+	}
+	 .nav-open .hamburger span:nth-of-type(3) {
+		-webkit-transform: translateY(-19px) rotate(45deg);
+		        transform: translateY(-19px) rotate(45deg);
+		-moz-transform: translateY(-19px) rotate(45deg);
+		-ms-transform: translateY(-19px) rotate(45deg);
+		-o-transform: translateY(-19px) rotate(45deg)
+	}
+	/*メニュー以外クリックしたとき*/
+	.black-bg {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 100;
+		background-color: #666;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .6s;
+		cursor: pointer;
+	  }
+}
+/*---------------------------
+    640px 以下 スマホ
+----------------------------*/
+@media screen and (max-width: 640px) {
+	#g_menu .hamburger {
+		top: 32px;
+	}
+	.global-nav {
+		width: 220px;
+	}
+}

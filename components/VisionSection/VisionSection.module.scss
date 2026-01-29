@@ -1,0 +1,100 @@
+
+.visionSection {
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 600px){
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    line-height: 1.8;
+  }
+
+  .uxOrbit {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+
+      @media screen and (min-width: 600px){
+        margin: 40px 0;
+      }
+    }
+
+
+    svg {
+    overflow: visible;
+    }
+
+
+    .orbit-path {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.08);
+    stroke-dasharray: 4 6;
+    }
+
+
+    .orbit {
+    transform-origin: 50% 50%;
+    -webkit-animation: rotate 22s linear infinite;
+            animation: rotate 22s linear infinite;
+    }
+
+
+    .ux-orbit:hover .orbit {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    }
+
+
+    /* キラキラ */
+    .sparkle {
+    fill: white;
+    -webkit-filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+    opacity: 0.85;
+    }
+
+
+    /* 中央要素 */
+    .core circle {
+    fill: #111;
+    }
+
+
+    .core text {
+    fill: white;
+    font-size: 12px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+    }
+
+
+    @-webkit-keyframes rotate {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+    }
+
+
+    @keyframes rotate {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+    }
+}

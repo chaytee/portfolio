@@ -1,0 +1,348 @@
+@charset "utf-8";
+/*================================================
+	640以下
+==================================================*/
+@media screen and (max-width: 640px) {
+	.dsp_smt {
+		display: block;
+	}
+	.dsp_hpt {
+		display: none;
+	}
+	#container {
+		padding-top: 55px;
+	}
+	#container h2.sub {
+		font-size: 2rem;
+	}
+	#container p {
+		font-size: 1.4rem;
+	}
+	.pt {
+		padding-top: 40px;
+	}
+	.pb {
+		padding-bottom: 40px;
+	}
+	.f-s,
+	.f-sb,
+	.f-sc {
+		-webkit-flex-flow: column;
+		        flex-flow: column;
+	}
+	.main {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.container h3.sub {
+		font-size: 19px;
+	}
+	/*ページタイトル*/
+	#page_title h2.top img {
+		height: 140px;
+		top: calc(50% - 60px);
+	}
+	#page_title .top_bg::before {
+		background-color: rgba(102, 102, 102, 0.1);
+	}
+	/*フッター*/
+	#footer .logo img{
+		width: 140px;
+	}
+	/*フレームシャドウ*/
+	.fr_out::before,
+	.fr_out::after {
+		width: calc(100% - 10px);
+		border-radius: 20px;
+	}
+	.fr_out::before {
+		border: 1px solid #75696d;
+	}
+	.fr_out::after {
+		top: 10px;
+		left: 10px;
+	}
+	#header h1 {
+		visibility:hidden
+	}
+	/*サブページ フォント形式*/
+	.container h2.sub1 {
+		font-size: 24px;
+		padding: 60px 0;
+	}
+	/*---------------------------------
+		トップページ
+	----------------------------------*/
+	/*トップメッセージ*/
+	#top-msg h3 {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	#top-msg .in {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		width: auto;
+	}
+	#top-msg .in .border-t,
+	#top-msg .in .border-b {
+		height: 2px;
+	}
+	#top-msg .in .border-L,
+	#top-msg .in .border-R {
+		width: 2px;
+	}
+	#top-msg .in .border-t {
+		top: 10px;
+	}
+	#top-msg .in .border-b {
+		bottom: 0;
+	}
+	#top-msg .in .border-L {
+		left: 10px;
+	}
+	#top-msg .in .border-R {
+		right: 10px;
+	}
+	#top-msg .in .box {
+		padding: 40px 25px;
+	}
+	#top-msg .in .txt {
+		font-size: 14px;
+		line-height: 1.7em;
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	#top-msg .in p:first-of-type {
+		margin-bottom: 20px;
+	}
+	#top-msg .in p:last-of-type {
+		text-align: left;
+	}
+	#top-msg .in2 {
+		-webkit-flex-flow: column;
+				flex-flow: column;
+				padding: 30px 15px;
+	}
+	#top-msg .in2 dl {
+		width: auto;
+	}
+	#top-msg .in2 dl+dl {
+		margin-top: 30px;
+	}
+	#top-msg .in2 dl dt {
+		line-height: 1.6em;
+		margin-bottom: 7px;
+		background-position: left 10px center;
+	}
+	#top-msg .in .img1 {
+		top: 310px;
+		width: 200px;
+		z-index: 10;
+	}
+	#top-msg .in .img2 {
+		bottom: -139%;
+		width: 200px;
+	}
+	#top-msg .in2 dl dd {
+		line-height: 1.5em;
+	}
+	/*サービス*/
+	#service {
+		padding-top: 40px;
+	}
+	#service h3.sub {
+		font-size: 22px;
+		margin-bottom: 40px;
+	}
+	#service .in {
+		-webkit-flex-flow: column;
+		        flex-flow: column;
+	}
+	#service .in dl {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+	#service .in dt {
+		width: 32%;
+		margin-bottom: 0;
+	}
+	#service .in dd {
+		width: 63%;
+	}
+	#service dl dd p {
+		line-height: 1.5em;
+		font-size: 13px;
+	}
+	#service dl h4 {
+		font-size: 16px;
+		text-align: left;
+		margin-bottom: 5px;
+	}
+	#service .in dl+dl {
+		margin-top: 30px;
+	}
+	#service .company .in2 {
+		padding: 30px 15px;
+	}
+	#service .company .in2 h4 {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	#service .company .in2 .txt1 {
+		text-align: left;
+	}
+	#service .in2 .txt2 {
+		text-align: left;
+	}
+	#service .btn a,
+	#top_work .btn a {
+		width: 220px;
+	}
+	/*トップワーク*/
+	#top_work h3.sub {
+		font-size: 22px;
+		padding: 70px 0;
+	}
+	/*ABOUT*/
+	#about {
+		padding-bottom: 40px;
+	}
+	#about .prof .in {
+		-webkit-flex-flow: column;
+		flex-flow: column;
+	}
+	#about .prof,
+	#about .sns_box {
+		width: 100%;
+	}
+	#about .prof {
+		padding: 30px 20px;
+	}
+	#about .sns_box {
+		position: static;
+		margin-top: 30px;
+		-webkit-transform:skewX(0deg);
+		transform:skewX(0deg);
+	}
+	#about .sns_box p+p {
+		margin-top: 20px;
+	}
+	/*CONTACT*/
+	#contact .in .txt {
+		text-align: left;
+	}
+	/*---------------------------------
+		制作例・実績
+	----------------------------------*/
+	/*制作例*/
+	#work {
+		background-position: left top 2360px;
+		background-size: 42%;
+	}
+	#work .note {
+			font-size: 13px;
+	}
+	#work .com {
+		font-size: 13px;
+	}
+	#work .wp .box {
+		padding: 20px 20px 30px 15px;
+	}
+	#work .wp .box h5 {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+	#work .wp .box .img {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: auto;
+		margin-bottom: 20px;
+	}
+	#work .wp .box .txt, #work .wp .box .memo, #work .wp .box .btn {
+		margin-left: 0;
+	}
+	#work .wp .box .txt,
+	#work .wp .box .txt_me {
+		line-height: 1.8em;
+		font-size: 14px;
+	}
+	#work .memo {
+		padding: 15px 10px;
+		margin-bottom: 20px;
+	}
+	#work .wp .box .btn a {
+		width: 220px;
+	}
+	#work .in {
+		-webkit-flex-flow: row;
+		flex-flow: row;
+		overflow-x: auto;
+	}
+	#work .in::-webkit-scrollbar {
+		height: 5px;
+	}
+	#work .in::-webkit-scrollbar-track {
+		background-color: #f2f2f2;
+	}
+	#work .in::-webkit-scrollbar-thumb {
+		background-color: #FC913A;
+	}
+	#work .in dl::before {
+		border: 1px solid #75696d;
+	}
+	#work .in dl {
+		padding: 20px 20px 15px;
+		width: 100%;
+		min-width: 290px;
+		border: 1px solid #75696d;
+		background-color: #fff;
+		position: relative;
+	}
+	#work .in dl+dl {
+		margin-left: 15px;
+	}
+	#work .in dl::after,
+	#work .in dl::before {
+		display: none;
+	}
+	#work .in dl dt {
+		margin-bottom: 10px;
+	}
+	#work h3.sub {
+		text-align: center;
+	}
+	#work h4 img {
+		height: 45px;
+	}
+	#work .in dl h5 {
+		font-size: 16px;
+		position: absolute;
+		top:-71px;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		margin-bottom: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		color: #fff;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	#work .in dl .txt {
+		margin-bottom: 10px;
+	}
+	#work .txt_sc {
+		line-height: 1em;
+	}
+}
+@media screen and (max-width: 320px) {
+	#top-msg .in .img2 {
+		bottom: -147%;
+	}
+}

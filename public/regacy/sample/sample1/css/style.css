@@ -1,0 +1,431 @@
+@charset "utf-8";
+/*--------------------------------------------------
+トップページ
+--------------------------------------------------*/
+/*スライドショー*/
+.slider-wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+/*トップインフォ*/
+#top_info {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#top_info .main {
+	background-image: url(../img/top/news-line.png), url(../img/top/news-line.png);
+	background-repeat: repeat-x;
+	background-position: top left, bottom left;
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+#top_info h2 {
+	margin-bottom: 40px;
+}
+#top_info .in {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#top_info dl dt, #top_info dl dd {
+	margin-bottom: 16px;
+	padding-bottom: 6px;
+}
+#top_info .in .news dl dt {
+	width: 100px;
+}
+#top_info dl dd {
+	border-bottom: 1px dotted #c0bfbf;
+}
+#top_info #sns img {
+	width: 240px;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+/*トップメニュー*/
+#top_menu {
+	background: #e3dede;
+}
+#top_menu p {
+	margin-bottom: 0;
+}
+#top_menu .in {
+	display: flex;
+	justify-content: space-between;
+}
+#top_menu dl {
+	width: 245px;
+	border: 3px #534847;
+	text-align: center;
+}
+#top_menu dl a {
+	color: #ffffff;
+}
+#top_menu dl a:hover {
+	color: #D81159;
+}
+#top_menu dl dt {
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #534847;
+	padding: 8px;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	-ms-border-radius: 10px 10px 0 0;
+	-o-border-radius: 10px 10px 0 0;
+}
+#top_menu dl dd img {
+	background-color: #534847;
+	border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-ms-border-radius: 0 0 10px 10px;
+	-o-border-radius: 0 0 10px 10px;
+}
+/*コンセプト*/
+#concept {
+	position: relative;
+}
+#concept::before {
+	position: absolute;
+	z-index: -2;
+	width: 100%;
+	height: 100%;
+	background: url(../img/top/gray.png), url(../img/top/consept-bg.jpg);
+	background-repeat: repeat, no-repeat;
+	background-size: auto, cover;
+	background-attachment: fixed;
+	content: "";
+}
+#concept p {
+	margin-bottom: 0;
+}
+#concept h2 {
+	background-color: #534847;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+#concept .in .row {
+	display: flex;
+	justify-content: space-between;
+}
+#concept .in .row-r {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	margin: 50px auto;
+}
+#concept .in dl {
+	width: 450px;
+}
+#concept .in dl img {
+	width: 100%;
+	height: auto;
+}
+#concept .in .text {
+	background: #ffffff;
+	padding: 20px;
+}
+#concept dl dt {
+	font-size: 1.4em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+/*price*/
+#price {
+	padding-bottom: 50px;
+}
+#price p {
+	margin-bottom: 0;
+}
+#price table td {
+	padding: 10px;
+}
+#price table tr {
+	border-bottom: 1px dotted #534847;
+}
+#price h2 {
+	margin-bottom: 30px;
+}
+#price h3 {
+	position: relative;
+	text-align: center;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+#price h3::before {
+	content: "";
+	display: block;
+	width: 90%;
+	height: 1px;
+	position: absolute;
+	left: 5%;
+	top: 10px;
+	background-color: #333;
+}
+#price h3 span {
+	background-color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+	z-index: 2;
+	padding: 10px;
+}
+#price h4 {
+	font-size: 1.2em;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#price .mx-w {
+	width: 137px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#price #nail {
+	margin-top: 50px;
+}
+#price #nail .txt {
+	margin-top: 50px;
+}
+/*contact*/
+#contact h2 img {
+	width: 150px;
+	margin-top: 50px;
+}
+#form {
+	margin: 50px auto;
+	width: 330px;
+}
+#form #name, #form #email, #form #num {
+	width: 300px;
+	;
+}
+#form textarea {
+	width: 300px;
+}
+#map {
+	margin-top: 30px;
+}
+#map h2 img {
+	width: 150px;
+}
+#g-map {
+	margin: 0 auto 0;
+	text-align: center;
+	border: 1px solid gray;
+	max-width: 600px;
+}
+/*==================================================
+	パソコンのみ適応
+==================================================*/
+@media print, screen and (min-width:769px) {
+	#top_info .in .news {
+		width: 750px;
+	}
+	#top_info .in .news dl dt {
+		float: left;
+		margin-right: 30px;
+	}
+	#top_info .in .news dl {
+		clear: both;
+	}
+}
+/*==================================================
+	768以下
+==================================================*/
+@media screen and (max-width: 768px) {
+	/*--------------------------------------------------
+トップページ
+--------------------------------------------------*/
+	/*トップインフォ*/
+	#top_info h2 {
+		margin-bottom: 20px;
+	}
+	#top_info {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	#top_info dl dt, #top_info dl dd {
+		padding: 10px;
+	}
+	#top_info dl dt {
+		float: left;
+	}
+	#top_info p img {
+		width: 180px;
+	}
+	/*トップメニュー*/
+	#top_menu .in {
+		flex-wrap: wrap;
+	}
+	/*コンセプト*/
+	#concept h2 {
+		margin-bottom: 50px;
+	}
+	#top_menu {
+		margin-top: 15px;
+	}
+	/*price*/
+	#price h3 {
+		font-size: 18px;
+	}
+	#price .mx-w {
+		width: 100px;
+	}
+	/*contact*/
+	#form {
+		margin: 100px auto;
+		width: 600px;
+	}
+	#form .df {
+		float: left;
+		margin-left: 0;
+	}
+	#form dt {
+		float: left;
+		clear: both;    /*.dfの解除もはいっている*/
+		width: 10em;
+		text-align: right;
+		padding-right: 2em;
+	}
+}
+/*================================================
+	640以下
+==================================================*/
+@media screen and (max-width: 640px) {
+	/*--------------------------------------------------
+トップページ
+--------------------------------------------------*/
+	/*トップインフォ*/
+	#top_info h2 {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	#top_info h2 img {
+		width: 180px;
+	}
+	#top_info .in {
+		flex-flow: column;
+	}
+	#top_info .smh p {
+		width: 60px;
+		margin-bottom: 0;
+		padding-top: 0;
+	}
+	#top_info #sns {
+		display: flex;
+		justify-content: space-around;
+		margin: 20px auto 0;
+	}
+	#top_info #sns img {
+		padding: 0;
+		border: none;
+		width: 70px;
+	}
+	/*メニュー*/
+	#top_menu {
+		margin-top: 0;
+	}
+	#top_menu dl {
+		margin: 0 auto;
+		width: 47%;
+	}
+	#top_menu dl:first-of-type {
+		margin-bottom: 20px;
+	}
+	#top_menu dl:nth-of-type(2) {
+		margin-bottom: 20px;
+	}
+	#top_menu dl dt {
+		font-size: 18px;
+	}
+	/*コンセプト*/
+	#concept .in .row {
+		flex-flow: column;
+	}
+	#concept .in .row-r {
+		flex-flow: column;
+	}
+	#concept .in dl {
+		width: 280px;
+		margin: 0 auto;
+	}
+	#concept .in .row-r {
+		margin: 30px auto;
+	}
+	#concept dl dt {
+		margin-bottom: 20px;
+	}
+	#concept h2 {
+		height: 50px;
+	}
+	#concept h2 img {
+		width: 150px;
+	}
+	/*price*/
+	#price h3 {
+		font-size: 16px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	#price h3.sp::before {
+		top: 24px;
+	}
+	#price h2 img {
+		width: 180px;
+	}
+	#price .mx-w {
+		margin-top: 15px;
+	}
+	#price #nail {
+		margin-top: 40px;
+	}
+	/*form*/
+	#form #name, #email, #tel, #num {
+		width: 400px;
+		;
+	}
+	#form textarea {
+		width: 400px;
+	}
+	/*contact*/
+	#contact h2 img {
+		width: 350px;
+	}
+	#map h2 img {
+		width: 220px;
+	}
+}
+/*================================
+	タブレットのみ適応
+=================================*/
+@media only screen and (max-width: 768px) and (min-width: 641px) {
+	/*トップインフォ*/
+	#top_info .news {
+		width: 63%;
+	}
+	#top_info .sns {
+		width: 35%;
+	}
+	/*トップメニュー*/
+	#top_menu dl {
+		width: 180px;
+	}
+}
+/*================================
+	スマホのみに適用
+=================================*/
+@media only screen and (max-width: 640px) {}
